@@ -31,6 +31,9 @@ const NewBoxForm = ({addBox}) => {
             width: width,
             height: height
           };
+
+        addBox(newBoxData);
+        setFormData(initialState);
         alert(`Response, your BG is ${backgroundcolor}, width is ${width}, height is ${height}`);
         setFormData(initialState);
     }
@@ -39,16 +42,28 @@ const NewBoxForm = ({addBox}) => {
     return(
         <form>
                 <label htmlFor="backgroundcolor">Background Color: </label>
-                <input type="text" placeholder="backgroundcolor" name="backgroundcolor"
-                    value={formData.backgroundcolor} onChange={handleChange}/>
+                <input 
+                    type="text" 
+                    placeholder="backgroundcolor" 
+                    name="backgroundcolor"
+                    value={formData.backgroundcolor} 
+                    onChange={handleChange}/>
            
                 <label htmlFor="width">Width: </label>
-                <input type="text" placeholder="width" name="width"
-                    value={formData.width} onChange={handleChange}/>
+                <input 
+                    type="text" 
+                    placeholder="width" 
+                    name="width"
+                    value={formData.width} 
+                    onChange={handleChange}/>
            
                 <label htmlFor="height">Height : </label>
-                <input type="text" placeholder="height" name="height"
-                    value={formData.height} onChange={handleChange}
+                <input 
+                    type="text" 
+                    placeholder="height" 
+                    name="height"
+                    value={formData.height} 
+                    onChange={handleChange}
                 />
            
         

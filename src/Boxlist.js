@@ -7,20 +7,25 @@ import NewBoxForm from "./NewBoxForm";
 
 const BoxList = () => {
 
-    // const [boxes, setBoxes] = useState([]);
+    const [boxes, setBoxes] = useState([]);
+
+    const addBox = (newBoxData) => {
+        setBoxes((prevBoxes) => [...prevBoxes, newBoxData]);
+      };
 
     return (
         <div>
-
-            < NewBoxForm />
-
-            <Box 
-                bgcolor= "blue" 
-                width="200px"
-                height="100px"/>
-            
+            <NewBoxForm addBox={addBox} />
+            {boxes.map((box, index) => (
+                <Box
+                key={index}
+                bgcolor={box.bgcolor}
+                width={box.width}
+                height={box.height}
+                />
+            ))}
         </div>
-    )
+    );
 }
 
 

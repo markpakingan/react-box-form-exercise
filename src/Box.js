@@ -7,14 +7,14 @@ const Box = ({bgcolor, width, height}) => {
     const divStyle = {
 
         backgroundColor: bgcolor, 
-        width: width,
-        height: height
+        width: width + "px",
+        height: height + "px"
 
     };
     
     return (
         <div style={divStyle}>
-            This is where the style will appear
+            
         </div>
     )
 }

@@ -9,15 +9,12 @@ import React, {useState} from 'react';
 function App() {
 
 
-  const [boxes, setBoxes] = useState([]);
-
-  
 
   return (
     <div className="App">
      
 
-     <BoxList boxes ={boxes}/>
+     <BoxList/>
 
     </div>
   );
