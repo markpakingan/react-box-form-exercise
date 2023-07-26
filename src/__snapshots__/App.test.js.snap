@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot for App.js 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <div>
+      <form>
+        <label
+          for="backgroundcolor"
+        >
+          Background Color: 
+        </label>
+        <input
+          name="backgroundcolor"
+          placeholder="backgroundcolor"
+          type="text"
+          value=""
+        />
+        <label
+          for="width"
+        >
+          Width: 
+        </label>
+        <input
+          name="width"
+          placeholder="width"
+          type="text"
+          value=""
+        />
+        <label
+          for="height"
+        >
+          Height : 
+        </label>
+        <input
+          name="height"
+          placeholder="height"
+          type="text"
+          value=""
+        />
+        <button>
+          Submit!
+        </button>
+      </form>
+    </div>
+    <div>
+      <div>
+        <label
+          for="task"
+        >
+          Things To Do: 
+        </label>
+        <input
+          name="task"
+          placeholder="task"
+          type="text"
+          value=""
+        />
+        <button>
+          AddTask
+        </button>
+      </div>
+      <ul />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot for boxlist 1`] = `
+<DocumentFragment>
+  <div>
+    <form>
+      <label
+        for="backgroundcolor"
+      >
+        Background Color: 
+      </label>
+      <input
+        name="backgroundcolor"
+        placeholder="backgroundcolor"
+        type="text"
+        value=""
+      />
+      <label
+        for="width"
+      >
+        Width: 
+      </label>
+      <input
+        name="width"
+        placeholder="width"
+        type="text"
+        value=""
+      />
+      <label
+        for="height"
+      >
+        Height : 
+      </label>
+      <input
+        name="height"
+        placeholder="height"
+        type="text"
+        value=""
+      />
+      <button>
+        Submit!
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

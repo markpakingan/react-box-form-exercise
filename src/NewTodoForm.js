@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const ToDoForm = ({addTask}) => {
+const NewToDoForm = ({addTask}) => {
 
 
     const [task, setTask] = useState([])
@@ -34,4 +34,4 @@ const ToDoForm = ({addTask}) => {
     )
 }
 
-export default ToDoForm;
+export default NewToDoForm;
