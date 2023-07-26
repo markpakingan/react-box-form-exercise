@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const Box = ({bgcolor, width, height}) => {
+const Box = ({id, bgcolor, width, height, removeBox}) => {
 
     const divStyle = {
 
@@ -11,10 +11,14 @@ const Box = ({bgcolor, width, height}) => {
         height: height + "px"
 
     };
+
+    const handleRemove = () => {
+        removeBox(id)
+    }
     
     return (
         <div style={divStyle}>
-            
+            <span onClick={handleRemove}>X</span>
         </div>
     )
 }

@@ -2,9 +2,7 @@
 
 import './App.css';
 import BoxList from './Boxlist';
-import Box from './Box';
-import NewBoxForm from './NewBoxForm';
-import React, {useState} from 'react';
+import React from 'react';
 
 function App() {
 

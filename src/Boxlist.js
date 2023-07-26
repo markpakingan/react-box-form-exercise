@@ -1,33 +1,39 @@
-// BoxList.js file
+// BoxList.js
 
-
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Box from "./Box";
 import NewBoxForm from "./NewBoxForm";
+import { v4 as uuidv4 } from "uuid";
 
 const BoxList = () => {
+  const [boxes, setBoxes] = useState([]);
 
-    const [boxes, setBoxes] = useState([]);
+  const addBox = (newBoxData) => {
+    setBoxes([
+      ...boxes,
+      { ...newBoxData, id: uuidv4() }
+    ]);
+  };
 
-    const addBox = (newBoxData) => {
-        setBoxes((prevBoxes) => [...prevBoxes, newBoxData]);
-      };
+  const removeBox = (id) => {
+    setBoxes(boxes.filter((box) => box.id !== id));
+  };
 
-    return (
-        <div>
-            <NewBoxForm addBox={addBox} />
-            {boxes.map((box, index) => (
-                <Box
-                key={index}
-                bgcolor={box.bgcolor}
-                width={box.width}
-                height={box.height}
-                />
-            ))}
-        </div>
-    );
-}
-
-
+  return (
+    <div>
+      <NewBoxForm addBox={addBox} />
+      {boxes.map((box) => (
+        <Box
+          key={box.id}
+          id={box.id}
+          bgcolor={box.bgcolor}
+          width={box.width}
+          height={box.height}
+          removeBox={removeBox}
+        />
+      ))}
+    </div>
+  );
+};
 
 export default BoxList;
