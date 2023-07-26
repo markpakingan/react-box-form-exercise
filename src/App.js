@@ -3,7 +3,7 @@
 import './App.css';
 import BoxList from './Boxlist';
 import React from 'react';
-
+import TodoList from './TodoList';
 function App() {
 
 
@@ -12,7 +12,10 @@ function App() {
     <div className="App">
      
 
-     <BoxList/>
+     {/* <BoxList/> */}
+
+    <TodoList />
+
 
     </div>
   );
